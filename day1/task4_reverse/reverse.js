@@ -4,7 +4,8 @@ function reverse_nums(){
     return 'please passing any parameter';
   [].reverse.apply(arguments);
   // [].reverse.call(arguments);
-  // [].reverse.bind(arguments); // not working
+  // var rev = [].reverse.bind(arguments);
+  // rev();
   for(var i=0;i<arguments.length;i++){
     if(!isFinite(arguments[i]))
       throw new Error('this function accepts number only')
@@ -17,7 +18,8 @@ function reverse_strings(){
     return 'please passing any parameter';
   // [].reverse.apply(arguments);
   [].reverse.call(arguments);
-  // [].reverse.bind(arguments); // not working
+  // var rev = [].reverse.bind(arguments);
+  // rev();
   for(var i=0;i<arguments.length;i++){
     if(!(typeof arguments[i] === 'string' || arguments[i] instanceof String))
       throw new Error('this function accepts strings only')
