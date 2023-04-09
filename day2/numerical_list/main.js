@@ -32,6 +32,7 @@ function List(start,end,step){
     }
   }
 }
+// prototype methods
 List.prototype.toString = function(){
   var str = ''
   for(var i=this.start;i<=this.end;i+=this.step){
